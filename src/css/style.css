@@ -1,0 +1,105 @@
+textarea {
+    resize: none;
+  }
+
+.dd-body {
+    font-family: 'Rokkitt', serif;
+}
+
+body {
+    @apply dd-body text-gray-800;
+}
+
+.dd-title {
+    font-family: 'Rubik', sans-serif;
+}
+
+.wwk_1, .wwk_2 {
+    opacity: 0;
+}
+
+.dd-success-icon {
+    .success {
+        fill: theme('colors.purple.400');
+    }
+}
+
+.dd-hx {
+    @apply dd-title font-bold tracking-wider
+}
+h1 {
+    @apply dd-hx text-3xl 
+}
+
+.dd-center {
+    @apply flex items-center justify-center
+}
+
+.dd-wrapper {
+    background: linear-gradient(white, theme('colors.gray.300'));
+}
+
+.dd-form-bg {
+    @apply absolute inset-0;
+    opacity: .05;
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuX3hrWVV3IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxsaW5lIHgxPSIwIiB5PSIwIiB4Mj0iMCIgeTI9IjIwIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMjAiLz48L3BhdHRlcm4+PC9kZWZzPiA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm5feGtZVXcpIiBvcGFjaXR5PSIxIi8+PC9zdmc+');
+}
+
+.dd-editor {
+    @apply leading-snug tracking-wide;
+    @screen xl {
+        @apply leading-normal;
+    }
+
+    *:not(:empty) + {
+        p, ul, ol {
+            @apply mt-4;
+        }
+        h1, h2, h3 {
+            @apply mt-8;
+        }
+    }
+
+    p, ul, ol {
+        &:first-child {
+            @apply mt-4;
+        }
+    }
+    h1, h2, h3 {
+        &:first-child {
+            @apply mt-8;
+        }
+    }
+    
+    li {
+        @apply ml-8;
+        & + li {
+            @apply mt-2;
+        }
+    }
+    ul {
+        li {
+            list-style-type: disc;
+        }
+    }
+    ol {
+        li {
+            list-style-type: decimal;
+        }
+    }
+
+    h2 {
+        @apply dd-hx text-2xl;
+    }
+    h3 {
+        @apply dd-hx text-xl;
+    }
+    a {
+        @apply text-blue-600 border-b-2 border-transparent;
+        transition: border-color ease .4s;
+
+        &:hover {
+            @apply border-blue-600;
+        }
+    }
+}

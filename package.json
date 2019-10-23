@@ -1,0 +1,18 @@
+{
+  "name": "dromedar-design",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "dromedar.design <gabor@dromedar.design>",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build"
+  },
+  "dependencies": {
+    "gatsby": "^2.16.1",
+    "gatsby-cli": "^2.8.4",
+    "gatsby-plugin-react-svg": "^2.1.2",
+    "gatsby-theme-dromedar": "0.1.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  }
+}
