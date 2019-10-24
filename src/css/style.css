@@ -1,21 +1,21 @@
-textarea {
-    resize: none;
-  }
-
 .dd-body {
     font-family: 'Rokkitt', serif;
-}
-
-body {
-    @apply dd-body text-gray-800;
 }
 
 .dd-title {
     font-family: 'Rubik', sans-serif;
 }
 
+body {
+    @apply dd-body text-gray-800;
+}
+
 .wwk_1, .wwk_2 {
     opacity: 0;
+}
+
+hr {
+    @apply border-4
 }
 
 .dd-success-icon {
@@ -25,10 +25,10 @@ body {
 }
 
 .dd-hx {
-    @apply dd-title font-bold tracking-wider
+    @apply dd-title font-bold tracking-wider leading-snug
 }
-h1 {
-    @apply dd-hx text-3xl 
+.dd-h1 {
+    @apply dd-hx text-3xl
 }
 
 .dd-center {
@@ -46,7 +46,7 @@ h1 {
 }
 
 .dd-editor {
-    @apply leading-snug tracking-wide;
+    @apply text-lg leading-snug tracking-wide;
     @screen xl {
         @apply leading-normal;
     }

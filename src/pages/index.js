@@ -77,9 +77,9 @@ export default ({ data }) => {
         }} className="dd-wrapper">
             <div className="max-w-2xl mx-auto px-4 md:px-8 pb-4 sm:pb-16">
                 <div className="mb-12">
-                    <h1 className="dd-h1 mt-4 w-64 sm:w-auto">{title}</h1>
-                    <p className="dd-title mt-2 text-gray-600">{description}</p>
-                    <hr className="mt-4" />
+                    <h1 className="dd-h1 w-64 sm:w-auto">{title}</h1>
+                    <p className="dd-title mt-4 text-lg text-gray-600 tracking-wide">{description}</p>
+                    <hr className="mt-6" />
                 </div>
                 <div>
                     <Body body={page.body} />
