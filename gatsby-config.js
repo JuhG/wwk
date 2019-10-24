@@ -3,8 +3,8 @@ module.exports = {
     {
       resolve: 'gatsby-theme-dromedar',
       options: {
-        url: 'https://dromedar.design',
-        api: 'http://api.dromedar.design.test/v1',
+        url: 'https://workshop.dromedar.design',
+        api: 'https://api.dromedar.design/v1',
         author: 'Dromedar Design',
         prismic: 'dromedar-design',
         language: 'hu',
