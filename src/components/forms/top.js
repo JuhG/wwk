@@ -9,7 +9,7 @@ export default () => {
         <div className="dd-form-bg"></div>
         <Form url="subscribe">
             {(register, state) => <div className="relative">
-                {state.response && 1 === state.response.code ?
+                {1 === state.response.code ?
                     <div className="text-gray-200 flex items-center">
                         <SuccessIcon className="dd-success-icon mr-4 sm:mr-8 h-16 w-16" />
                         <p class="mt-0">{state.response.text}</p>

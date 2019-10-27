@@ -9,7 +9,7 @@ export default (props) => {
             top: '-2.2rem',
             left: '-2.2rem',
             opacity: .2
-        }} className="absolute italic text-purple-600" aria-hidden="true">"</p>
+        }} className="absolute italic text-purple-600 w-24">"</p>
         <Text {...props} />
     </div>
 }
