@@ -120,6 +120,8 @@ export const query = graphql`
                     type
                     primary {
                         form_name
+                        form_title
+                        text
                     }
                 }
                 ... on PRISMIC_PageBodyCard {

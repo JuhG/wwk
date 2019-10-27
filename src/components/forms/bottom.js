@@ -4,7 +4,7 @@ import Form from 'gatsby-theme-dromedar/src/utils/form'
 import SuccessIcon from '../../assets/success.svg'
 import Spinner from "../../assets/spinner.svg"
 
-export default () => {
+export default ({ title, text }) => {
     return <div className="relative mt-8 mb-10 p-4 sm:p-8 rounded-lg bg-gray-700">
         <div className="dd-form-bg"></div>
         <Form url="apply">
@@ -17,14 +17,13 @@ export default () => {
                     :
                     <div>
                         <div className="mb-8">
-                            <h2 className="text-gray-300 dd-hx text-2xl">Jelentkezz!</h2>
-                            <p className="mt-1 text-gray-500">Mindenkivel egyeztetünk az
-                            időpontról amint összegyűlik a létszám.</p>
+                            <h2 className="text-gray-300 dd-hx text-2xl">{title}</h2>
+                            <p className="mt-1 text-gray-500">{text}</p>
                             <hr className="mt-2 border-gray-600" />
                         </div>
 
                         <label className="block">
-                            <p className="text-gray-400">Mi a motivációd? Konkrét cél?</p>
+                            <p className="text-gray-400">Mi a motivációd, hogy programozást tanulj?</p>
                             <input
                                 className="mt-1 w-full rounded-lg py-3 px-5 bg-gray-300 text-gray-800"
                                 name="motivation" type="text" maxLength="255" ref={register}

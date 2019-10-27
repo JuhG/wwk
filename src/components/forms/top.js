@@ -4,7 +4,7 @@ import Form from 'gatsby-theme-dromedar/src/utils/form'
 import SuccessIcon from '../../assets/success.svg'
 import Spinner from "../../assets/spinner.svg"
 
-export default () => {
+export default ({ text }) => {
     return <div className="relative mt-8 mb-10 p-4 sm:p-8 rounded-lg bg-gray-700">
         <div className="dd-form-bg"></div>
         <Form url="subscribe">
@@ -16,7 +16,7 @@ export default () => {
                     </div>
                     :
                     <div>
-                        <p className="mb-4 text-gray-400">Ha érdekel, íratkozz fel a hírlevelünkre:</p>
+                        <p className="mb-4 text-gray-400">{text}</p>
                         <div className="rounded-lg overflow-hidden flex flex-col sm:flex-row">
                             <input
                                 className="flex-1 py-3 px-5 bg-gray-300 text-gray-800"
