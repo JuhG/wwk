@@ -15,7 +15,7 @@ body {
 }
 
 hr {
-    @apply border-4
+    @apply border-2;
 }
 
 .dd-success-icon {
@@ -25,18 +25,18 @@ hr {
 }
 
 .dd-hx {
-    @apply dd-title font-bold tracking-wider leading-snug
+    @apply dd-title font-bold tracking-wider leading-snug;
 }
 .dd-h1 {
-    @apply dd-hx text-3xl
+    @apply dd-hx text-3xl;
 }
 
 .dd-center {
-    @apply flex items-center justify-center
+    @apply flex items-center justify-center;
 }
 
 .dd-wrapper {
-    background: linear-gradient(white, theme('colors.gray.300'));
+    background: linear-gradient(white, theme('colors.gray.200'));
 }
 
 .dd-form-bg {
@@ -73,19 +73,16 @@ hr {
     
     li {
         @apply ml-8;
+
         & + li {
             @apply mt-2;
         }
     }
-    ul {
-        li {
-            list-style-type: disc;
-        }
+    ul li {
+        list-style-type: disc;
     }
-    ol {
-        li {
-            list-style-type: decimal;
-        }
+    ol li {
+        list-style-type: decimal;
     }
 
     h2 {
@@ -94,12 +91,15 @@ hr {
     h3 {
         @apply dd-hx text-xl;
     }
+    
     a {
-        @apply text-blue-600 border-b-2 border-transparent;
+        @apply text-purple-600 border-b-2 border-transparent;
         transition: border-color ease .4s;
 
-        &:hover {
-            @apply border-blue-600;
+        @screen sm {
+            &:hover {
+                @apply border-purple-600;
+            }
         }
     }
 }

@@ -1,7 +1,7 @@
 module.exports = (doc) => {
     switch (doc.type) {
-        case 'page':
-            return '/page/' + doc.uid
+        // case 'page':
+        //     return doc.uid
 
         default:
             return '/'

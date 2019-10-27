@@ -24,7 +24,7 @@ export default ({ data }) => {
             transform: 'translateY(calc(50vh - 50%)) scale(2)',
         },
         onLoad: {},
-        delay: 1800,
+        delay: 1650,
     });
 
     const c1 = useOnLoad({
@@ -34,7 +34,7 @@ export default ({ data }) => {
         onLoad: {
             background: 'transparent',
         },
-        delay: 2200,
+        delay: 2050,
     });
 
     const c2 = useOnLoad({
@@ -45,17 +45,20 @@ export default ({ data }) => {
             height: 100,
             background: 'rgba(255, 255, 255, .9)',
         },
-        delay: 2300,
+        delay: 2100,
     });
 
     const title = RichText.asText(page.title || [])
     const description = RichText.asText(page.description || [])
+    const image = page.image && page.image.url
+    console.log(image)
 
     return <Layout>
         <SEO
             titleTemplate="%s"
             title={title}
             description={description}
+            image={image}
         >
             <link href="https://fonts.googleapis.com/css?family=Rokkitt:400,700|Rubik:400,500&display=swap" rel="stylesheet" />
         </SEO>
@@ -74,7 +77,7 @@ export default ({ data }) => {
         <div style={{
             marginTop: 120,
             minHeight: 'calc(100vh - 120px)',
-        }} className="dd-wrapper">
+        }} className="dd-wrapper pb-8">
             <div className="max-w-2xl mx-auto px-4 md:px-8 pb-4 sm:pb-16">
                 <div className="mb-12">
                     <h1 className="dd-h1 w-64 sm:w-auto">{title}</h1>
@@ -95,6 +98,7 @@ export const query = graphql`
         page(uid: "workshop", lang: "hu") {
             title
             description
+            image
             _meta {
                 type
                 uid
@@ -117,6 +121,21 @@ export const query = graphql`
                     type
                     primary {
                         form_name
+                    }
+                }
+                ... on PRISMIC_PageBodyCard {
+                    type
+                    primary {
+                        name
+                        text
+                        profile_image
+                        profile_imageSharp {
+                            childImageSharp {
+                                fluid(maxWidth: 1920) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
                     }
                 }
                 ... on PRISMIC_PageBodyImage {

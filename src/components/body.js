@@ -4,6 +4,7 @@ import Image from './blocks/image'
 import Text from './blocks/text'
 import Form from './blocks/form'
 import Highlight from './blocks/highlight'
+import Card from './blocks/card'
 
 export default ({
     body,
@@ -21,6 +22,9 @@ export default ({
 
             case 'form':
                 return <Form {...data} key={index} />
+
+            case 'card':
+                return <Card {...data} key={index} />
 
             default:
                 return null
