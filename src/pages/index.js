@@ -51,7 +51,6 @@ export default ({ data }) => {
     const title = RichText.asText(page.title || [])
     const description = RichText.asText(page.description || [])
     const image = page.image && page.image.url
-    console.log(image)
 
     return <Layout>
         <SEO

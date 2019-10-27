@@ -12,7 +12,7 @@ module.exports = {
       options: {
         url: process.env.DD_URL,
         api: process.env.DD_API,
-        author: 'Dromedar Design',
+        author: '@juhgabor',
         prismic: 'dromedar-design',
         language: 'hu',
         title: 'Dromedar Design',
