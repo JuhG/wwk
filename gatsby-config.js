@@ -21,12 +21,12 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Dromedar Design',
-        short_name: 'DD',
+        name: 'Webfejlesztő Workshop Kecskemét',
+        short_name: 'WWK',
         start_url: '/',
         background_color: '#ffffff',
         theme_color: '#805ad5',
-        display: 'standalone',
+        display: 'browser',
         icon: 'src/favicon.png',
       },
     },
